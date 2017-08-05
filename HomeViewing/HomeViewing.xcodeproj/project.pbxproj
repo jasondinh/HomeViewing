@@ -60,6 +60,7 @@
 		9648F4EA1F35746900818581 /* PBRMaterial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBRMaterial.m; sourceTree = "<group>"; };
 		9648F4EB1F35746900818581 /* Plane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plane.m; sourceTree = "<group>"; };
 		96E2990F1F35AAF300B6EEDB /* mat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mat.png; sourceTree = "<group>"; };
+		96E299101F35AC1100B6EEDB /* dragon.dae */ = {isa = PBXFileReference; lastKnownFileType = text.xml.dae; path = dragon.dae; sourceTree = "<group>"; };
 		9EA2A82F7C066AD213166F34 /* Pods-HomeViewing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeViewing.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeViewing/Pods-HomeViewing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +123,7 @@
 		961E4AC21F35630A00E9CFD0 /* HomeViewing */ = {
 			isa = PBXGroup;
 			children = (
+				96E299101F35AC1100B6EEDB /* dragon.dae */,
 				961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */,
 				9648F4E21F356E0800818581 /* CameraViewController.swift */,
 				9648F4E41F356E0F00818581 /* MainViewController.swift */,
