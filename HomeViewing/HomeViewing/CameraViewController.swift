@@ -60,7 +60,6 @@ class CameraViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        print("new plane")
         let plane = Plane(anchor: anchor as! ARPlaneAnchor, isHidden: false, with: Plane.currentMaterial())
         self.planes![anchor.identifier.uuidString] = plane
         node.addChildNode(plane!)

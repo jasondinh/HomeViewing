@@ -78,26 +78,7 @@ static int currentMaterialIndex = 0;
 }
 
 + (SCNMaterial *)currentMaterial {
-  NSString *materialName;
-  switch(currentMaterialIndex) {
-    case 0:
-      materialName = @"tron";
-      break;
-    case 1:
-      materialName = @"oakfloor2";
-      break;
-    case 2:
-      materialName = @"sculptedfloorboards";
-      break;
-    case 3:
-      materialName = @"granitesmooth";
-      break;
-    case 4:
-      // planes will be transparent
-      return nil;
-      break;
-  }
-  return [[PBRMaterial materialNamed:materialName] copy];
+  return [[PBRMaterial materialNamed: @"mat"] copy];
 }
 
 - (void)update:(ARPlaneAnchor *)anchor {

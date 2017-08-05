@@ -56,10 +56,10 @@
 		9648F4E41F356E0F00818581 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9648F4E61F35746100818581 /* HomeViewing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeViewing-Bridging-Header.h"; sourceTree = "<group>"; };
 		9648F4E71F35746300818581 /* Plane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
-		9648F4E81F35746900818581 /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		9648F4E91F35746900818581 /* PBRMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBRMaterial.h; sourceTree = "<group>"; };
 		9648F4EA1F35746900818581 /* PBRMaterial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBRMaterial.m; sourceTree = "<group>"; };
 		9648F4EB1F35746900818581 /* Plane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plane.m; sourceTree = "<group>"; };
+		96E2990F1F35AAF300B6EEDB /* mat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mat.png; sourceTree = "<group>"; };
 		9EA2A82F7C066AD213166F34 /* Pods-HomeViewing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeViewing.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeViewing/Pods-HomeViewing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,10 +129,10 @@
 				961E4ACA1F35630A00E9CFD0 /* Assets.xcassets */,
 				961E4ACC1F35630A00E9CFD0 /* LaunchScreen.storyboard */,
 				961E4ACF1F35630A00E9CFD0 /* Info.plist */,
-				9648F4E81F35746900818581 /* Assets.scnassets */,
 				9648F4E91F35746900818581 /* PBRMaterial.h */,
 				9648F4EA1F35746900818581 /* PBRMaterial.m */,
 				9648F4E71F35746300818581 /* Plane.h */,
+				96E2990F1F35AAF300B6EEDB /* mat.png */,
 				9648F4EB1F35746900818581 /* Plane.m */,
 				9648F4E61F35746100818581 /* HomeViewing-Bridging-Header.h */,
 			);
