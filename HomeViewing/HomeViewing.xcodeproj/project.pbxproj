@@ -13,6 +13,8 @@
 		961E4ACE1F35630A00E9CFD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961E4ACC1F35630A00E9CFD0 /* LaunchScreen.storyboard */; };
 		961E4AD91F35630A00E9CFD0 /* HomeViewingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AD81F35630A00E9CFD0 /* HomeViewingTests.swift */; };
 		961E4AE41F35630A00E9CFD0 /* HomeViewingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AE31F35630A00E9CFD0 /* HomeViewingUITests.swift */; };
+		9648F4E31F356E0800818581 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F4E21F356E0800818581 /* CameraViewController.swift */; };
+		9648F4E51F356E0F00818581 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F4E41F356E0F00818581 /* MainViewController.swift */; };
 		A4097217BB6BE4D8E52B11A2 /* Pods_HomeViewing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20559B53B355691011D6B688 /* Pods_HomeViewing.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		961E4ADF1F35630A00E9CFD0 /* HomeViewingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeViewingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		961E4AE31F35630A00E9CFD0 /* HomeViewingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewingUITests.swift; sourceTree = "<group>"; };
 		961E4AE51F35630A00E9CFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9648F4E21F356E0800818581 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		9648F4E41F356E0F00818581 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9EA2A82F7C066AD213166F34 /* Pods-HomeViewing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeViewing.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeViewing/Pods-HomeViewing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */,
+				9648F4E21F356E0800818581 /* CameraViewController.swift */,
+				9648F4E41F356E0F00818581 /* MainViewController.swift */,
 				961E4AC51F35630A00E9CFD0 /* ViewController.swift */,
 				961E4ACA1F35630A00E9CFD0 /* Assets.xcassets */,
 				961E4ACC1F35630A00E9CFD0 /* LaunchScreen.storyboard */,
@@ -347,6 +353,8 @@
 			files = (
 				961E4AC61F35630A00E9CFD0 /* ViewController.swift in Sources */,
 				961E4AC41F35630A00E9CFD0 /* AppDelegate.swift in Sources */,
+				9648F4E31F356E0800818581 /* CameraViewController.swift in Sources */,
+				9648F4E51F356E0F00818581 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
