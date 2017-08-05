@@ -18,6 +18,8 @@ class MainViewController: UIViewController {
         self.cameraViewController = CameraViewController()
         if let tabBar = self.tabBar,
             let cameraViewController = self.cameraViewController {
+            
+            
             self.view.addSubview(tabBar)
             tabBar.snp.makeConstraints({ (make) in
                 make.left.equalTo(self.view)
@@ -25,6 +27,17 @@ class MainViewController: UIViewController {
                 make.bottom.equalTo(self.view)
             })
             
+            
+            
+            let videoItem = UITabBarItem(title: "Video", image: nil, selectedImage: nil)
+            let arItem = UITabBarItem(title: "AR", image: nil, selectedImage: nil)
+            let videoCallItem = UITabBarItem(title: "Call", image: nil, selectedImage: nil)
+            let uberItem = UITabBarItem(title: "Uber", image: nil, selectedImage: nil)
+            
+            tabBar.items = [videoItem, arItem, videoCallItem, uberItem]
+            tabBar.selectedItem = videoItem
+            
+            tabBar.delegate = self
             self.view.addSubview(cameraViewController.view)
             
             cameraViewController.view.snp.makeConstraints({ (make) in
@@ -34,5 +47,12 @@ class MainViewController: UIViewController {
                 make.bottom.equalTo(tabBar.snp.top)
             })
         }
+    }
+}
+
+extension MainViewController:UITabBarDelegate {
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        let index = tabBar.items?.index(of: item)
+        print(index!)
     }
 }
