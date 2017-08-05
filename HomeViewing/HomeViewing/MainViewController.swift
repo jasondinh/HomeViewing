@@ -12,12 +12,15 @@ class MainViewController: UIViewController {
     
     var tabBar:UITabBar?
     var cameraViewController:CameraViewController?
+    var callViewController:CallViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar = UITabBar(frame: .zero)
         self.cameraViewController = CameraViewController()
+        self.callViewController = CallViewController()
         if let tabBar = self.tabBar,
-            let cameraViewController = self.cameraViewController {
+            let cameraViewController = self.cameraViewController,
+            let callViewController = self.callViewController {
             
             
             self.view.addSubview(tabBar)
@@ -38,14 +41,21 @@ class MainViewController: UIViewController {
             tabBar.selectedItem = videoItem
             
             tabBar.delegate = self
-            self.view.addSubview(cameraViewController.view)
-            
-            cameraViewController.view.snp.makeConstraints({ (make) in
+            self.view.addSubview(callViewController.view)
+            callViewController.view.snp.makeConstraints({ (make) in
                 make.left.equalTo(self.view)
                 make.right.equalTo(self.view)
                 make.top.equalTo(self.view)
                 make.bottom.equalTo(tabBar.snp.top)
             })
+//            self.view.addSubview(cameraViewController.view)
+//
+//            cameraViewController.view.snp.makeConstraints({ (make) in
+//                make.left.equalTo(self.view)
+//                make.right.equalTo(self.view)
+//                make.top.equalTo(self.view)
+//                make.bottom.equalTo(tabBar.snp.top)
+//            })
         }
     }
 }
