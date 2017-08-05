@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
             
             tabBar.delegate = self
             self.view.addSubview(cameraViewController.view)
-            
+            self.addChildViewController(cameraViewController)
             cameraViewController.view.snp.makeConstraints({ (make) in
                 make.left.equalTo(self.view)
                 make.right.equalTo(self.view)

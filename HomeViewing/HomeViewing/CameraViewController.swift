@@ -8,13 +8,17 @@
 
 import UIKit
 import ARKit
+import SceneKit
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, ARSCNViewDelegate {
     var sceneView:ARSCNView?
-    var planes:[String:Any]?
+    var planes:[String:Plane]?
     var arConfig:ARWorldTrackingSessionConfiguration?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        UIApplication.shared.isIdleTimerDisabled = true
+        
         self.setupScene()
         
         if let sceneView = self.sceneView {
@@ -26,22 +30,49 @@ class CameraViewController: UIViewController {
     }
     
     func setupScene() {
-        self.sceneView = ARSCNView(frame: .zero)
+        self.sceneView = ARSCNView.init()
         self.arConfig = ARWorldTrackingSessionConfiguration()
         
         if let sceneView = self.sceneView,
             let arConfig = self.arConfig {
+            
+            let scene = SCNScene()
+            
+            sceneView.scene = scene
+            sceneView.antialiasingMode = .multisampling4X
+            
             arConfig.isLightEstimationEnabled = true
             arConfig.planeDetection = .horizontal
             
+            sceneView.autoenablesDefaultLighting = true;
+            sceneView.automaticallyUpdatesLighting = true;
+            sceneView.showsStatistics = true
+            sceneView.debugOptions = [
+                ARSCNDebugOptions.showWorldOrigin,
+                ARSCNDebugOptions.showFeaturePoints
+            ]
             sceneView.delegate = self;
-            sceneView.session.run(arConfig, options: [])
+            
+            sceneView.session.run(arConfig);
+            
         }
         self.planes = [:]
-        
     }
-}
-
-extension CameraViewController: ARSCNViewDelegate {
     
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        print("new plane")
+        let plane = Plane(anchor: anchor as! ARPlaneAnchor, isHidden: false, with: Plane.currentMaterial())
+        self.planes![anchor.identifier.uuidString] = plane
+        node.addChildNode(plane!)
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        if let plane = self.planes![anchor.identifier.uuidString] {
+            plane.update(anchor as! ARPlaneAnchor)
+        }
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
+        self.planes![anchor.identifier.uuidString] = nil
+    }
 }
