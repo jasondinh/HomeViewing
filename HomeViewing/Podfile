@@ -1,0 +1,26 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+project 'HomeViewing.xcodeproj'
+use_frameworks!
+
+def myPods
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'ObjectMapper'
+  pod 'SnapKit'
+  pod 'Kingfisher'
+  pod 'UIColor_Hex_Swift'
+  pod 'TTTAttributedLabel'
+end
+
+target 'HomeViewing' do
+  myPods
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+    end
+  end
+end
