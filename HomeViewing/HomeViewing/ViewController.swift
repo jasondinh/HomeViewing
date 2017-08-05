@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let mainViewController = MainViewController()
         self.view.addSubview(mainViewController.view)
+        self.addChildViewController(mainViewController)
         mainViewController.view.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }

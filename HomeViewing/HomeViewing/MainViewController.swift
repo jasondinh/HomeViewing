@@ -41,15 +41,18 @@ class MainViewController: UIViewController {
             tabBar.selectedItem = videoItem
             
             tabBar.delegate = self
+            
             self.view.addSubview(callViewController.view)
+            self.addChildViewController(callViewController)
             callViewController.view.snp.makeConstraints({ (make) in
                 make.left.equalTo(self.view)
                 make.right.equalTo(self.view)
                 make.top.equalTo(self.view)
                 make.bottom.equalTo(tabBar.snp.top)
             })
+            
 //            self.view.addSubview(cameraViewController.view)
-//
+//            self.addChildViewController(cameraViewController)
 //            cameraViewController.view.snp.makeConstraints({ (make) in
 //                make.left.equalTo(self.view)
 //                make.right.equalTo(self.view)
