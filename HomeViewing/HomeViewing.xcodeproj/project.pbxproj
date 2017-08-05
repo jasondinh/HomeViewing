@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E3520FC1F35AB6900DBBB01 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3520FB1F35AB6900DBBB01 /* Utils.swift */; };
+		2E3521031F35D60300DBBB01 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3521021F35D60200DBBB01 /* CameraViewController.swift */; };
+		2EA1DFE81F35F2070037143C /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1DFE71F35F2070037143C /* VideoViewController.swift */; };
+		2EA1DFEA1F35F5300037143C /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 2EA1DFE91F35F5300037143C /* video.MOV */; };
+		2EF16CEA1F35A2C800142E2E /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF16CE91F35A2C800142E2E /* CallViewController.swift */; };
 		960398C61F35D2A30051F936 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 960398C51F35D24F0051F936 /* art.scnassets */; };
 		960398C91F35D5E70051F936 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 960398C71F35D4670051F936 /* Models.scnassets */; };
 		961E4AC41F35630A00E9CFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */; };
@@ -15,7 +20,6 @@
 		961E4ACE1F35630A00E9CFD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961E4ACC1F35630A00E9CFD0 /* LaunchScreen.storyboard */; };
 		961E4AD91F35630A00E9CFD0 /* HomeViewingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AD81F35630A00E9CFD0 /* HomeViewingTests.swift */; };
 		961E4AE41F35630A00E9CFD0 /* HomeViewingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AE31F35630A00E9CFD0 /* HomeViewingUITests.swift */; };
-		9648F4E31F356E0800818581 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F4E21F356E0800818581 /* CameraViewController.swift */; };
 		9648F4E51F356E0F00818581 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F4E41F356E0F00818581 /* MainViewController.swift */; };
 		9648F4EC1F35746900818581 /* PBRMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9648F4EA1F35746900818581 /* PBRMaterial.m */; };
 		9648F4ED1F35746900818581 /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = 9648F4EB1F35746900818581 /* Plane.m */; };
@@ -60,6 +64,11 @@
 /* Begin PBXFileReference section */
 		20559B53B355691011D6B688 /* Pods_HomeViewing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeViewing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EED847D9940584BE6B5E26 /* Pods-HomeViewing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeViewing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeViewing/Pods-HomeViewing.debug.xcconfig"; sourceTree = "<group>"; };
+		2E3520FB1F35AB6900DBBB01 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2E3521021F35D60200DBBB01 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = /Users/patcho/Documents/HomeViewing/HomeViewing/HomeViewing/CameraViewController.swift; sourceTree = "<absolute>"; };
+		2EA1DFE71F35F2070037143C /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		2EA1DFE91F35F5300037143C /* video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.MOV; sourceTree = "<group>"; };
+		2EF16CE91F35A2C800142E2E /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		960398C51F35D24F0051F936 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		960398C71F35D4670051F936 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		960B33231F35F07F00032E7A /* riva1920_onelove.dae */ = {isa = PBXFileReference; lastKnownFileType = text.xml.dae; path = riva1920_onelove.dae; sourceTree = "<group>"; };
@@ -78,7 +87,6 @@
 		961E4ADF1F35630A00E9CFD0 /* HomeViewingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeViewingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		961E4AE31F35630A00E9CFD0 /* HomeViewingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewingUITests.swift; sourceTree = "<group>"; };
 		961E4AE51F35630A00E9CFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9648F4E21F356E0800818581 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		9648F4E41F356E0F00818581 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9648F4E61F35746100818581 /* HomeViewing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeViewing-Bridging-Header.h"; sourceTree = "<group>"; };
 		9648F4E71F35746300818581 /* Plane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
@@ -172,8 +180,6 @@
 				9699EB2A1F360D7D006D8157 /* WINNER.dae */,
 				9699EB271F3609D0006D8157 /* Beek_Collection_Bibi_120x120_mat(1) */,
 				9699EB261F3609CE006D8157 /* Beek_Collection_Bibi_120x120_mat(1).dae */,
-				961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */,
-				9648F4E21F356E0800818581 /* CameraViewController.swift */,
 				9699EB1E1F35FFF9006D8157 /* Trussardi_Casa_Cherries_Floor_Lamp_mat(2).dae */,
 				96E299111F35B27300B6EEDB /* Model.swift */,
 				9699EB231F360858006D8157 /* lumina_italia_matrix_terra */,
@@ -185,9 +191,15 @@
 				9699EB171F35FE91006D8157 /* loewe_tv_individual_compose_3.dae */,
 				9699EB0F1F35F88A006D8157 /* intertime_1191_liv_2_seater_sofa_wide_nofh */,
 				9699EB0E1F35F889006D8157 /* intertime_1191_liv_2_seater_sofa_wide_nofh.dae */,
-				9648F4E41F356E0F00818581 /* MainViewController.swift */,
 				9699EB131F35FADF006D8157 /* willisau_vulcano */,
 				9699EB121F35FADD006D8157 /* willisau_vulcano.dae */,
+				2EA1DFE91F35F5300037143C /* video.MOV */,
+				961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */,
+				9648F4E41F356E0F00818581 /* MainViewController.swift */,
+				2E3521021F35D60200DBBB01 /* CameraViewController.swift */,
+				2E3520FB1F35AB6900DBBB01 /* Utils.swift */,
+				2EF16CE91F35A2C800142E2E /* CallViewController.swift */,
+				2EA1DFE71F35F2070037143C /* VideoViewController.swift */,
 				961E4AC51F35630A00E9CFD0 /* ViewController.swift */,
 				960B33281F35F22800032E7A /* ka_design_m6_bed */,
 				960B33271F35F22700032E7A /* ka_design_m6_bed.dae */,
@@ -365,6 +377,7 @@
 				960398C91F35D5E70051F936 /* Models.scnassets in Resources */,
 				960398C61F35D2A30051F936 /* art.scnassets in Resources */,
 				961E4ACE1F35630A00E9CFD0 /* LaunchScreen.storyboard in Resources */,
+				2EA1DFEA1F35F5300037143C /* video.MOV in Resources */,
 				961E4ACB1F35630A00E9CFD0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +414,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		65E2D8AB171C97BF5BC96372 /* [CP] Embed Pods Frameworks */ = {
@@ -460,10 +473,13 @@
 				96E299121F35B27300B6EEDB /* Model.swift in Sources */,
 				9648F4ED1F35746900818581 /* Plane.m in Sources */,
 				961E4AC61F35630A00E9CFD0 /* ViewController.swift in Sources */,
+				2EA1DFE81F35F2070037143C /* VideoViewController.swift in Sources */,
 				961E4AC41F35630A00E9CFD0 /* AppDelegate.swift in Sources */,
 				9648F4EC1F35746900818581 /* PBRMaterial.m in Sources */,
-				9648F4E31F356E0800818581 /* CameraViewController.swift in Sources */,
+				2EF16CEA1F35A2C800142E2E /* CallViewController.swift in Sources */,
+				2E3521031F35D60300DBBB01 /* CameraViewController.swift in Sources */,
 				9648F4E51F356E0F00818581 /* MainViewController.swift in Sources */,
+				2E3520FC1F35AB6900DBBB01 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
