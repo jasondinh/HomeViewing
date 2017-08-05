@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E3520FE1F35BEA500DBBB01 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3520FD1F35BEA500DBBB01 /* CallViewController.swift */; };
+		2E3520FC1F35AB6900DBBB01 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3520FB1F35AB6900DBBB01 /* Utils.swift */; };
+		2E3521031F35D60300DBBB01 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3521021F35D60200DBBB01 /* CameraViewController.swift */; };
+		2EF16CEA1F35A2C800142E2E /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF16CE91F35A2C800142E2E /* CallViewController.swift */; };
 		961E4AC41F35630A00E9CFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */; };
 		961E4AC61F35630A00E9CFD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AC51F35630A00E9CFD0 /* ViewController.swift */; };
 		961E4ACB1F35630A00E9CFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 961E4ACA1F35630A00E9CFD0 /* Assets.xcassets */; };
 		961E4ACE1F35630A00E9CFD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961E4ACC1F35630A00E9CFD0 /* LaunchScreen.storyboard */; };
 		961E4AD91F35630A00E9CFD0 /* HomeViewingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AD81F35630A00E9CFD0 /* HomeViewingTests.swift */; };
 		961E4AE41F35630A00E9CFD0 /* HomeViewingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AE31F35630A00E9CFD0 /* HomeViewingUITests.swift */; };
-		9648F4E31F356E0800818581 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F4E21F356E0800818581 /* CameraViewController.swift */; };
 		9648F4E51F356E0F00818581 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648F4E41F356E0F00818581 /* MainViewController.swift */; };
 		9648F4EC1F35746900818581 /* PBRMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9648F4EA1F35746900818581 /* PBRMaterial.m */; };
 		9648F4ED1F35746900818581 /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = 9648F4EB1F35746900818581 /* Plane.m */; };
@@ -41,7 +42,9 @@
 /* Begin PBXFileReference section */
 		20559B53B355691011D6B688 /* Pods_HomeViewing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeViewing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EED847D9940584BE6B5E26 /* Pods-HomeViewing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeViewing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeViewing/Pods-HomeViewing.debug.xcconfig"; sourceTree = "<group>"; };
-		2E3520FD1F35BEA500DBBB01 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		2E3520FB1F35AB6900DBBB01 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2E3521021F35D60200DBBB01 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = /Users/patcho/Documents/HomeViewing/HomeViewing/HomeViewing/CameraViewController.swift; sourceTree = "<absolute>"; };
+		2EF16CE91F35A2C800142E2E /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		961E4AC01F35630A00E9CFD0 /* HomeViewing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeViewing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		961E4AC51F35630A00E9CFD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		961E4ADF1F35630A00E9CFD0 /* HomeViewingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeViewingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		961E4AE31F35630A00E9CFD0 /* HomeViewingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewingUITests.swift; sourceTree = "<group>"; };
 		961E4AE51F35630A00E9CFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9648F4E21F356E0800818581 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		9648F4E41F356E0F00818581 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9648F4E61F35746100818581 /* HomeViewing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeViewing-Bridging-Header.h"; sourceTree = "<group>"; };
 		9648F4E71F35746300818581 /* Plane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
@@ -127,9 +129,10 @@
 			children = (
 				96E299101F35AC1100B6EEDB /* dragon.dae */,
 				961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */,
-				9648F4E21F356E0800818581 /* CameraViewController.swift */,
-				2E3520FD1F35BEA500DBBB01 /* CallViewController.swift */,
 				9648F4E41F356E0F00818581 /* MainViewController.swift */,
+				2E3521021F35D60200DBBB01 /* CameraViewController.swift */,
+				2E3520FB1F35AB6900DBBB01 /* Utils.swift */,
+				2EF16CE91F35A2C800142E2E /* CallViewController.swift */,
 				961E4AC51F35630A00E9CFD0 /* ViewController.swift */,
 				961E4ACA1F35630A00E9CFD0 /* Assets.xcassets */,
 				961E4ACC1F35630A00E9CFD0 /* LaunchScreen.storyboard */,
@@ -316,7 +319,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		65E2D8AB171C97BF5BC96372 /* [CP] Embed Pods Frameworks */ = {
@@ -375,9 +378,10 @@
 				961E4AC61F35630A00E9CFD0 /* ViewController.swift in Sources */,
 				961E4AC41F35630A00E9CFD0 /* AppDelegate.swift in Sources */,
 				9648F4EC1F35746900818581 /* PBRMaterial.m in Sources */,
-				9648F4E31F356E0800818581 /* CameraViewController.swift in Sources */,
+				2EF16CEA1F35A2C800142E2E /* CallViewController.swift in Sources */,
+				2E3521031F35D60300DBBB01 /* CameraViewController.swift in Sources */,
 				9648F4E51F356E0F00818581 /* MainViewController.swift in Sources */,
-				2E3520FE1F35BEA500DBBB01 /* CallViewController.swift in Sources */,
+				2E3520FC1F35AB6900DBBB01 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,7 +546,7 @@
 				INFOPLIST_FILE = HomeViewing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.tinywhale.HomeViewing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.patrick.HomeViewing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HomeViewing/HomeViewing-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -562,7 +566,7 @@
 				INFOPLIST_FILE = HomeViewing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.tinywhale.HomeViewing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.patrick.HomeViewing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HomeViewing/HomeViewing-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     var tabBar:UITabBar?
     var cameraViewController:CameraViewController?
     var callViewController:CallViewController?
+    var activeViewNum = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar = UITabBar(frame: .zero)
@@ -42,30 +43,89 @@ class MainViewController: UIViewController {
             
             tabBar.delegate = self
             
-            self.view.addSubview(callViewController.view)
-            self.addChildViewController(callViewController)
-            callViewController.view.snp.makeConstraints({ (make) in
-                make.left.equalTo(self.view)
-                make.right.equalTo(self.view)
-                make.top.equalTo(self.view)
-                make.bottom.equalTo(tabBar.snp.top)
-            })
-            
-//            self.view.addSubview(cameraViewController.view)
-//            self.addChildViewController(cameraViewController)
-//            cameraViewController.view.snp.makeConstraints({ (make) in
+//            self.view.addSubview(callViewController.view)
+//            self.addChildViewController(callViewController)
+//            callViewController.view.snp.makeConstraints({ (make) in
 //                make.left.equalTo(self.view)
 //                make.right.equalTo(self.view)
 //                make.top.equalTo(self.view)
 //                make.bottom.equalTo(tabBar.snp.top)
 //            })
+            
+            self.view.addSubview(cameraViewController.view)
+            self.addChildViewController(cameraViewController)
+            cameraViewController.view.snp.makeConstraints({ (make) in
+                make.left.equalTo(self.view)
+                make.right.equalTo(self.view)
+                make.top.equalTo(self.view)
+                make.bottom.equalTo(tabBar.snp.top)
+            })
         }
     }
 }
 
 extension MainViewController:UITabBarDelegate {
+    
+    func removeViewController() {
+        switch activeViewNum {
+        case 0:
+            return
+        case 1:
+            self.cameraViewController?.view.removeFromSuperview()
+            self.cameraViewController?.removeFromParentViewController()
+        case 2:
+            self.callViewController?.view.removeFromSuperview()
+            self.callViewController?.removeFromParentViewController()
+        case 3:
+            return
+        default:
+            return
+        }
+        
+    }
+    
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         let index = tabBar.items?.index(of: item)
-        print(index!)
+        if index == activeViewNum {
+            return
+        }
+        if index != 3 { // UBER
+            removeViewController()
+        }
+        switch index! {
+        case 0:
+            activeViewNum = 0
+        case 1:
+            self.view.addSubview(self.cameraViewController!.view)
+            self.addChildViewController(self.cameraViewController!)
+            self.cameraViewController?.view.snp.makeConstraints({ (make) in
+                make.left.equalTo(self.view)
+                make.right.equalTo(self.view)
+                make.top.equalTo(self.view)
+                make.bottom.equalTo(tabBar.snp.top)
+            })
+            activeViewNum = 1
+        case 2:
+            self.view.addSubview(callViewController!.view)
+            self.addChildViewController(callViewController!)
+            callViewController?.view.snp.makeConstraints({ (make) in
+                make.left.equalTo(self.view)
+                make.right.equalTo(self.view)
+                make.top.equalTo(self.view)
+                make.bottom.equalTo(tabBar.snp.top)
+            })
+            activeViewNum = 2
+        case 3:
+            let url = URL(string: "https://m.uber.com/ul/?action=setPickup&client_id=n8V9GfHfYf3rfRuWuU83ORc5ehAYwwmo&pickup[formatted_address]=163%20Tampines%20Street%2012%20Singapore&pickup[latitude]=1.349478&pickup[longitude]=103.947256")
+            
+            if UIApplication.shared.canOpenURL(URL(fileURLWithPath: "uber://")) {
+                UIApplication.shared.open(url!)
+            } else {
+                return
+            }
+            activeViewNum = 3
+        default:
+            return
+        }
     }
 }

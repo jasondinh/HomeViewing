@@ -11,6 +11,7 @@ def myPods
   pod 'Kingfisher'
   pod 'UIColor_Hex_Swift'
   pod 'TTTAttributedLabel'
+  pod 'TwilioVideo', '~> 1.3.0'
 end
 
 target 'HomeViewing' do

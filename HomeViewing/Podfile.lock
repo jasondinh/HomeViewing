@@ -5,6 +5,7 @@ PODS:
   - SnapKit (3.2.0)
   - SwiftyJSON (3.1.4)
   - TTTAttributedLabel (2.0.0)
+  - TwilioVideo (1.3.0)
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - SnapKit
   - SwiftyJSON
   - TTTAttributedLabel
+  - TwilioVideo (~> 1.3.0)
   - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
@@ -23,8 +25,9 @@ SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
+  TwilioVideo: 97fe11ad5630e20591198015833cd12e2d1e1ea5
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: d25f327a4df9adc5b0c90ce9afda573dd07dba98
+PODFILE CHECKSUM: f45657a2acf78b6017982dc410d3486ae787fb1f
 
-COCOAPODS: 1.3.0
+COCOAPODS: 1.2.0
