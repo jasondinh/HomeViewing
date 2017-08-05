@@ -19,7 +19,7 @@ static int currentMaterialIndex = 0;
   self.anchor = anchor;
   float width = anchor.extent.x;
   float length = anchor.extent.z;
-  
+    self.opacity = 0.2;
   // Using a SCNBox and not SCNPlane to make it easy for the geometry we add to the
   // scene to interact with the plane.
   

@@ -3,3 +3,5 @@
 //
 
 #import "Plane.h"
+#import "Cube.h"
+#import "CollisionCategory.h"

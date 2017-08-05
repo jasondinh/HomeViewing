@@ -27,6 +27,41 @@ class CameraViewController: UIViewController, ARSCNViewDelegate {
                 make.size.equalTo(self.view)
             })
         }
+        
+        self.setupPhysics()
+        self.setupRecognizer()
+    }
+    
+    func setupPhysics() {
+        if let scene = self.sceneView?.scene {
+            scene.physicsWorld.contactDelegate = self
+        }
+    }
+    
+    func setupRecognizer() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped(gesture:)))
+        self.sceneView?.addGestureRecognizer(tap)
+    }
+    
+    func tapped(gesture:UITapGestureRecognizer) {
+        //find the nearest plane
+        
+        let tapPoint = gesture.location(in: self.sceneView!)
+        let arHitResult = self.sceneView?.hitTest(tapPoint, types: .existingPlaneUsingExtent)
+        if arHitResult!.count == 0 {
+            return
+        }
+        self.insertCube(hitResult: arHitResult!.first!)
+    }
+    
+    func insertCube(hitResult: ARHitTestResult) {
+        let insertionYOffset:Float = 0.01
+        let position = SCNVector3(hitResult.worldTransform.columns.3.x,
+                                  hitResult.worldTransform.columns.3.y + insertionYOffset,
+                                  hitResult.worldTransform.columns.3.z);
+        
+        let model = Model(modelName: "wolf", position: position)
+        self.sceneView?.scene.rootNode.addChildNode(model)
     }
     
     func setupScene() {
@@ -46,10 +81,10 @@ class CameraViewController: UIViewController, ARSCNViewDelegate {
             
             sceneView.autoenablesDefaultLighting = true;
             sceneView.automaticallyUpdatesLighting = true;
-            sceneView.showsStatistics = true
             sceneView.debugOptions = [
                 ARSCNDebugOptions.showWorldOrigin,
                 ARSCNDebugOptions.showFeaturePoints
+                
             ]
             sceneView.delegate = self;
             
@@ -73,5 +108,19 @@ class CameraViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
         self.planes![anchor.identifier.uuidString] = nil
+    }
+}
+
+extension CameraViewController: SCNPhysicsContactDelegate {
+    func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
+        print("begin contact")
+    }
+    
+    func physicsWorld(_ world: SCNPhysicsWorld, didUpdate contact: SCNPhysicsContact) {
+        print("update contact")
+    }
+    
+    func physicsWorld(_ world: SCNPhysicsWorld, didEnd contact: SCNPhysicsContact) {
+        print("end contact")
     }
 }
