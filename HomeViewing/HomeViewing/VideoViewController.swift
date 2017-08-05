@@ -11,6 +11,12 @@ import UIKit
 import AVKit
 import AVFoundation
 
+class CustomAVPlayerViewController: AVPlayerViewController {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesBegan")
+    }
+}
+
 class VideoViewController: UIViewController {
     
     var moviePlayer: AVPlayer?
@@ -31,7 +37,7 @@ class VideoViewController: UIViewController {
         let videoURL = URL(fileURLWithPath: path)
         moviePlayer = AVPlayer(url: videoURL)
         let playerLayer = AVPlayerLayer(player: moviePlayer)
-        playerLayer.frame = self.view.bounds
+        playerLayer.frame = CGRect(x: 50, y: 50, width: self.view.bounds.size.width-100, height: self.view.bounds.size.height-100)
         self.view.layer.addSublayer(playerLayer)
         moviePlayer?.play()
         try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: [])

@@ -16,7 +16,9 @@ class CallViewController: UIViewController {
     
     // Configure access token manually for testing, if desired! Create one manually in the console
     // at https://www.twilio.com/user/account/video/dev-tools/testing-tools
-    var accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTS2JjMDI5ZmJkMjc2ZmFmZGVmNDBkYzU0ZGNjM2VlZjFjLTE1MDE5MzM3MTUiLCJpc3MiOiJTS2JjMDI5ZmJkMjc2ZmFmZGVmNDBkYzU0ZGNjM2VlZjFjIiwic3ViIjoiQUNiMTdkMDJmMDAwNTg3MzZjZTdjYzEyMjcxNTQzYjY4YSIsImV4cCI6MTUwMTkzNzMxNSwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiUGF0cmljayIsInZpZGVvIjp7fX19.-fEvUYynGfSFpdtdJPYUiuV7X4DSSCaTncp1rStZIk0"
+    var accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzM2MzExOTY5NWQ3ZDhlYjExY2E3NmIxNWZlZDQyYTQwLTE1MDE5NDE4MjAiLCJncmFudHMiOnsiaWRlbnRpdHkiOiJmaXJzdF91c2VyIn0sImlzcyI6IlNLMzYzMTE5Njk1ZDdkOGViMTFjYTc2YjE1ZmVkNDJhNDAiLCJuYmYiOjE1MDE5NDE4MjAsImV4cCI6MTUwMTk1MjYyMCwic3ViIjoiQldmaU1GOEpzOUdCV0JFSEZjdmh6WWZuOHFPUGt5WWsifQ.Tl6UOjAQSn3TQm7MCs0xvooZiX8TTIfP-m5EqqATdtc"
+    
+    var accessToken2 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzM2MzExOTY5NWQ3ZDhlYjExY2E3NmIxNWZlZDQyYTQwLTE1MDE5NDE0NzciLCJncmFudHMiOnsiaWRlbnRpdHkiOiJzZWNvbmRfdXNlciIsInZpZGVvIjp7InJvb20iOiJob29kaXNydXB0X2RlbW8ifX0sImlzcyI6IlNLMzYzMTE5Njk1ZDdkOGViMTFjYTc2YjE1ZmVkNDJhNDAiLCJuYmYiOjE1MDE5NDE0NzcsImV4cCI6MTUwMTk1MjI3Nywic3ViIjoiQldmaU1GOEpzOUdCV0JFSEZjdmh6WWZuOHFPUGt5WWsifQ.KFVUqVPJzPcTiZSUhWxkg1xK-kN83aXfkH1GpJMCi08"
     
     // Configure remote URL to fetch token from
     var tokenUrl = "http://localhost:8000/token.php"
@@ -44,36 +46,82 @@ class CallViewController: UIViewController {
     // MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.previewView = TVIVideoView(frame: CGRect(x: 244, y: 497, width: 120, height: 160))
-        self.connectButton = UIButton(frame: CGRect(x: 16, y: 325, width: 343, height: 44))
+        
+        // PREVIEW
+        self.previewView = TVIVideoView() // frame: CGRect(x: 244, y: 497, width: 120, height: 160)
+        previewView?.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(previewView!)
+        let pvWidthConstraint = NSLayoutConstraint(item: previewView!, attribute: .width, relatedBy: .equal,
+                                                 toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 120)
+        let pvHeightConstraint = NSLayoutConstraint(item: previewView!, attribute: .height, relatedBy: .equal,
+                                                  toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 160)
+        let pvXConstraint = NSLayoutConstraint(item: previewView!, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1, constant: -10)
+        let pvYConstraint = NSLayoutConstraint(item: previewView!, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: -10)
+        NSLayoutConstraint.activate([pvWidthConstraint, pvHeightConstraint, pvXConstraint, pvYConstraint])
+        
+        // CONNECT BUTTON
+        self.connectButton = UIButton() // frame: CGRect(x: 16, y: 325, width: 343, height: 44)
         connectButton?.backgroundColor = .red
-        connectButton?.setTitle("Connect", for: .normal)
-        self.disconnectButton = UIButton(frame: CGRect(x: 11, y: 613, width: 80, height: 44))
-        disconnectButton?.backgroundColor = .blue
+        connectButton?.setTitle("Call Frodo", for: .normal)
+        connectButton?.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(connectButton!)
+        let widthConstraint = NSLayoutConstraint(item: connectButton!, attribute: .width, relatedBy: .equal,
+                                                 toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 343)
+        let heightConstraint = NSLayoutConstraint(item: connectButton!, attribute: .height, relatedBy: .equal,
+                                                  toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 44)
+        let xConstraint = NSLayoutConstraint(item: connectButton!, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
+        let yConstraint = NSLayoutConstraint(item: connectButton!, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0)
+        NSLayoutConstraint.activate([widthConstraint, heightConstraint, xConstraint, yConstraint])
+        
+        // DISCONNECT BUTTON
+        self.disconnectButton = UIButton() // frame: CGRect(x: 11, y: 613, width: 80, height: 44)
+        disconnectButton?.backgroundColor = .red
         disconnectButton?.setTitle("Disconnect", for: .normal)
+        disconnectButton?.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(disconnectButton!)
+        let dcWidthConstraint = NSLayoutConstraint(item: disconnectButton!, attribute: .width, relatedBy: .equal,
+                                                   toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 120)
+        let dcHeightConstraint = NSLayoutConstraint(item: disconnectButton!, attribute: .height, relatedBy: .equal,
+                                                    toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 44)
+        let dcXConstraint = NSLayoutConstraint(item: disconnectButton!, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1, constant: 10)
+        let dcYConstraint = NSLayoutConstraint(item: disconnectButton!, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: -10)
+        NSLayoutConstraint.activate([dcWidthConstraint, dcHeightConstraint, dcXConstraint, dcYConstraint])
+        
         self.messageLabel = UILabel() // frame: CGRect(x: 0, y: 20, width: 375, height: 16)
         self.roomTextField = UITextField() // frame: CGRect(x: 16, y: 279, width: 343, height: 30)
         self.roomLine = UIView() // frame: CGRect(x: 16, y: 304, width: 343, height: 2)
         roomLine?.backgroundColor = .black
-        roomTextField?.text = "Patrick Cho"
+        roomTextField?.text = "hoodisrupt_demo"
         self.roomLabel = UILabel()
+        
+        // MIC BUTTON
         self.micButton = UIButton(frame: CGRect(x: 101, y: 613, width: 80, height: 44))
         micButton?.setTitle("Mute", for: .normal)
         micButton?.backgroundColor = .red
+        micButton?.addTarget(self, action: #selector(toggleMic(sender:)), for: .touchUpInside)
+        micButton?.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(micButton!)
+        let micWidthConstraint = NSLayoutConstraint(item: micButton!, attribute: .width, relatedBy: .equal,
+                                                   toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 120)
+        let micHeightConstraint = NSLayoutConstraint(item: micButton!, attribute: .height, relatedBy: .equal,
+                                                    toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 44)
+        let micXConstraint = NSLayoutConstraint(item: micButton!, attribute: .leading, relatedBy: .equal, toItem: disconnectButton!, attribute: .trailing, multiplier: 1, constant: 10)
+        let micYConstraint = NSLayoutConstraint(item: micButton!, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: -10)
+        NSLayoutConstraint.activate([micWidthConstraint, micHeightConstraint, micXConstraint, micYConstraint])
         
         connectButton?.addTarget(self, action: #selector(connect(sender:)), for: .touchUpInside)
         disconnectButton?.addTarget(self, action: #selector(disconnect(sender:)), for: .touchUpInside)
-        micButton?.addTarget(self, action: #selector(toggleMic(sender:)), for: .touchUpInside)
         
-        self.view.addSubview(previewView!)
-        self.view.addSubview(connectButton!)
-        self.view.addSubview(disconnectButton!)
+        
+        
+        
+        
+        
         self.view.addSubview(messageLabel!)
         self.view.addSubview(roomTextField!)
         self.view.addSubview(roomLine!)
         self.view.addSubview(roomLabel!)
-        self.view.addSubview(micButton!)
-        
+    
         if PlatformUtils.isSimulator {
             self.previewView?.removeFromSuperview()
         } else {
