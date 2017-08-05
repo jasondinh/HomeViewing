@@ -13,15 +13,16 @@ class MainViewController: UIViewController {
     var tabBar:UITabBar?
     var cameraViewController:CameraViewController?
     var callViewController:CallViewController?
+    var videoViewController:VideoViewController?
     var activeViewNum = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar = UITabBar(frame: .zero)
         self.cameraViewController = CameraViewController()
         self.callViewController = CallViewController()
+        self.videoViewController = VideoViewController()
         if let tabBar = self.tabBar,
-            let cameraViewController = self.cameraViewController,
-            let callViewController = self.callViewController {
+            let cameraViewController = self.cameraViewController {
             
             
             self.view.addSubview(tabBar)
@@ -94,6 +95,14 @@ extension MainViewController:UITabBarDelegate {
         }
         switch index! {
         case 0:
+            self.view.addSubview(videoViewController!.view)
+            self.addChildViewController(videoViewController!)
+            videoViewController?.view.snp.makeConstraints({ (make) in
+                make.left.equalTo(self.view)
+                make.right.equalTo(self.view)
+                make.top.equalTo(self.view)
+                make.bottom.equalTo(tabBar.snp.top)
+            })
             activeViewNum = 0
         case 1:
             self.view.addSubview(self.cameraViewController!.view)

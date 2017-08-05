@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E3520FC1F35AB6900DBBB01 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3520FB1F35AB6900DBBB01 /* Utils.swift */; };
 		2E3521031F35D60300DBBB01 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3521021F35D60200DBBB01 /* CameraViewController.swift */; };
+		2EA1DFE81F35F2070037143C /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1DFE71F35F2070037143C /* VideoViewController.swift */; };
+		2EA1DFEA1F35F5300037143C /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 2EA1DFE91F35F5300037143C /* video.MOV */; };
 		2EF16CEA1F35A2C800142E2E /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF16CE91F35A2C800142E2E /* CallViewController.swift */; };
 		961E4AC41F35630A00E9CFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */; };
 		961E4AC61F35630A00E9CFD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E4AC51F35630A00E9CFD0 /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 		21EED847D9940584BE6B5E26 /* Pods-HomeViewing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeViewing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeViewing/Pods-HomeViewing.debug.xcconfig"; sourceTree = "<group>"; };
 		2E3520FB1F35AB6900DBBB01 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2E3521021F35D60200DBBB01 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = /Users/patcho/Documents/HomeViewing/HomeViewing/HomeViewing/CameraViewController.swift; sourceTree = "<absolute>"; };
+		2EA1DFE71F35F2070037143C /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		2EA1DFE91F35F5300037143C /* video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.MOV; sourceTree = "<group>"; };
 		2EF16CE91F35A2C800142E2E /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		961E4AC01F35630A00E9CFD0 /* HomeViewing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeViewing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,11 +132,13 @@
 			isa = PBXGroup;
 			children = (
 				96E299101F35AC1100B6EEDB /* dragon.dae */,
+				2EA1DFE91F35F5300037143C /* video.MOV */,
 				961E4AC31F35630A00E9CFD0 /* AppDelegate.swift */,
 				9648F4E41F356E0F00818581 /* MainViewController.swift */,
 				2E3521021F35D60200DBBB01 /* CameraViewController.swift */,
 				2E3520FB1F35AB6900DBBB01 /* Utils.swift */,
 				2EF16CE91F35A2C800142E2E /* CallViewController.swift */,
+				2EA1DFE71F35F2070037143C /* VideoViewController.swift */,
 				961E4AC51F35630A00E9CFD0 /* ViewController.swift */,
 				961E4ACA1F35630A00E9CFD0 /* Assets.xcassets */,
 				961E4ACC1F35630A00E9CFD0 /* LaunchScreen.storyboard */,
@@ -283,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				961E4ACE1F35630A00E9CFD0 /* LaunchScreen.storyboard in Resources */,
+				2EA1DFEA1F35F5300037143C /* video.MOV in Resources */,
 				961E4ACB1F35630A00E9CFD0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +383,7 @@
 			files = (
 				9648F4ED1F35746900818581 /* Plane.m in Sources */,
 				961E4AC61F35630A00E9CFD0 /* ViewController.swift in Sources */,
+				2EA1DFE81F35F2070037143C /* VideoViewController.swift in Sources */,
 				961E4AC41F35630A00E9CFD0 /* AppDelegate.swift in Sources */,
 				9648F4EC1F35746900818581 /* PBRMaterial.m in Sources */,
 				2EF16CEA1F35A2C800142E2E /* CallViewController.swift in Sources */,
